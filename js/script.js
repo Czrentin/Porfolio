@@ -45,7 +45,7 @@ function switchTheme(e) {
   }
 }
 
-// Save user preference on load
+// Sauvegarde theme
 
 const currentTheme = localStorage.getItem('theme')
   ? localStorage.getItem('theme')
@@ -58,3 +58,20 @@ if (currentTheme) {
     toggleSwitch.checked = true
   }
 }
+
+// Gestion modal
+
+const modals = document.querySelectorAll('.modal')
+const cards = document.querySelectorAll('.card')
+
+cards.forEach((card, index) => {
+  card.addEventListener('click', () => {
+    modals[index].showModal()
+  })
+})
+
+modals.forEach((modal) => {
+  modal.querySelector('.close-modal').addEventListener('click', () => {
+    modal.close()
+  })
+})
