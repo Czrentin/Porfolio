@@ -3,274 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <script
-      src="https://kit.fontawesome.com/dd1d346b96.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="./assets/style/CSS/style.css"
+    <!-- Primary Meta Tags -->
+    <title>Portfolio Corentin Braud</title>
+    <meta
+      name="title"
+      content="Portfolio Corentin Braud"
     />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Portfolio de Corentin Braud</title>
     <meta
       name="description"
-      content="Je suis un jeune développeur web orienté front-end avec une soif d'apprendre et toujours prêt à relever des défis !"
+      content="Simple portfolio d'un développeur français situé en région parisienne !"
+    />
+
+    <!-- Link -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/utilities.css"
     />
   </head>
   <body>
-    <header>
-      <h1>Corentin Braud</h1>
-      <nav>
-        <ul>
-          <li><a href="#skills">Mes compétences</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#projects">Mes travaux</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <header id="hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <div id="logo">
+            <a href="https://github.com/Czrentin"
+              ><img
+                src="./assets/portrait.jpg"
+                alt="Your Logo"
+            /></a>
+          </div>
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <li>
+              <a
+                class="nav-link"
+                href="#about-me"
+                >À PROPOS</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#projects"
+                >PROJETS</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="nav-link"
+                href="#footer"
+                >CONTACT</a
+              >
+            </li>
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input
+                type="checkbox"
+                id="switch"
+              />
+              <label
+                class="toggle-icons"
+                for="switch"
+              >
+                <img
+                  class="moon"
+                  src="assets/moon.svg"
+                />
+                <img
+                  class="sun"
+                  src="assets/sun.svg"
+                />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
       </nav>
+
+      <section class="header-container">
+        <img
+          class="profile-image"
+          src="assets/portrait.jpg"
+          alt=""
+        />
+        <h1>Corentin Braud</h1>
+
+        <div class="content-text">
+          <h2>Développeur web</h2>
+          <p>
+            Un développeur front-end avec de l'expérience dans les milieux
+            artistique, de quoi apporter une note de fraicheur dans vos projets.
+          </p>
+        </div>
+        <a
+          href="https://github.com/Czrentin"
+          class="btn btn-secondary"
+          target="_blank"
+          >Mon GitHub</a
+        >
+      </section>
     </header>
 
-    <main>
-      <section
-        id="introduction"
-        class="section-introduction-container"
-      >
-        <div class="main-introduction-container">
-          <h2>
-            Bonjour ! <br />
-            Je m'appelle Corentin Braud et je suis développeur front-end.
-          </h2>
-          <img
-            src="assets/images/portrait.jpg"
-            alt="Portrait de Corentin Braud"
-          />
-        </div>
-        <div class="scroll-introduction-container">
-          <a href="#projects"
-            >Voir mon travail<i class="fa-solid fa-arrow-down"></i
-          ></a>
-        </div>
-      </section>
-
-      <section
-        id="skills"
-        class="section section-skills-container"
-      >
-        <h3>Mes compétences</h3>
-        <article>
-          <div>
-            <h4>Front-end</h4>
-            <p>
-              Voici les principales technologies front-end que j'ai travaillé et
-              bientôt d'autres s'y ajouteront !
-            </p>
-          </div>
-          <ul>
-            <li>
-              <img
-                src="assets/images/logos/html-logo.png"
-                alt="logo html"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/sass-logo.png"
-                alt="logo sass"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/js-logo.png"
-                alt="logo Javascript"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/react-js-logo.png"
-                alt="logo React.js"
-              />
-            </li>
-          </ul>
-        </article>
-        <article>
-          <div>
-            <h4>Back-end</h4>
-            <p>
-              Afin d'être plus polyvalent et d'avoir une meilleure compréhension
-              de l'ensemble de ce que peut-être un projet web j'ai aussi
-              travaillé différentes technologies back-end.
-            </p>
-          </div>
-          <ul>
-            <li>
-              <img
-                src="assets/images/logos/node-js-logo.png"
-                alt="logo node.js"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/mongo-db-logo.png"
-                alt="logo sass"
-              />
-            </li>
-          </ul>
-        </article>
-        <article>
-          <div>
-            <h4>Mes outils</h4>
-            <p>
-              Pour développer j'utilise différents outils qui m'aide à gagner du
-              temps et rester focus sur l'important ou encore trouver des
-              solutions à des problèmes que je peux rencontrer.
-            </p>
-          </div>
-          <ul>
-            <li>
-              <img
-                src="assets/images/logos/vscode-logo.png"
-                alt="logo vscode"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/git-logo.png"
-                alt="logo Git"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/github-logo.png"
-                alt="logo GitHub"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/postman-logo.png"
-                alt="logo Postman"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/images/logos/figma-logo.png"
-                alt="logo Figma"
-              />
-            </li>
-          </ul>
-        </article>
-      </section>
-
-      <section
-        id="about"
-        class="section section-about-container"
-      >
-        <h3>À propos de moi</h3>
+    <!-- À propos -->
+    <section
+      id="about-me"
+      class="project-container container"
+    >
+      <div class="division"></div>
+      <div class="content-text">
+        <h2>À propos de moi</h2>
         <p>
-          Je suis un jeune développeur web orienté front-end qui provient de
-          région parisienne. <br />
-          D'un naturel curieux et passionné j'adore apprendre des nouvelles
-          choses et me plonger à fond dedans ! <br />
-          Je compare beaucoup ma façon de voir le travail avec ma façon de voir
-          le sport, il faut que ça soit une passion et entretenir une part de
-          compétition et de passion pour y trouver son bonheur. <br />
+          Jeune développeur de 22 ans, je sors d'une formation de développeur
+          web avec OpenClassrooms où j'ai pu me construire une première base de
+          compétences aussi bien en front-end quand back-end.
         </p>
-      </section>
-
-      <section
-        id="projects"
-        class="section section-projects-container"
-      >
-        <h3>Mes travaux</h3>
-        <p>
-          Voici quelques exemples des travaux que j'ai pu réaliser, vous pouvez
-          en trouver bien d'autres sur mon profil GitHub.
-        </p>
-
-        <div class="poster-modal">
-          <img
-            src="assets/images/screenshots/booki-home-page-1.png"
-            alt=""
-          />
-          <button class="open-modal">Voir plus</button>
-        </div>
-        <dialog class="modal">
-          <img
-            src=""
-            alt=""
-          />
-          <p>1</p>
-          <button class="close-modal">Close</button>
-        </dialog>
-
-        <div class="poster-modal">
-          <img
-            src="assets/images/screenshots/kasa-home-page.png"
-            alt=""
-          />
-          <button class="open-modal">Voir plus</button>
-        </div>
-        <dialog class="modal">
-          <img
-            src=""
-            alt=""
-          />
-          <p>2</p>
-          <button class="close-modal">Close</button>
-        </dialog>
-
-        <div class="poster-modal">
-          <img
-            src="assets/images/screenshots/porfolio-architecte-presentation.png"
-            alt=""
-          />
-          <button class="open-modal">Voir plus</button>
-        </div>
-        <dialog class="modal">
-          <img
-            src=""
-            alt=""
-          />
-          <p>3</p>
-          <button class="close-modal">Close</button>
-        </dialog>
-      </section>
-
-      <section
-        id="contact"
-        class="section section-contact-container"
-      >
-        <h3>Me contacter</h3>
-        <p>
-          N'hésitez pas à me contacter par mail pour des opportunités
-          professionnelles ! <br />
-          <br />
-          corentin.braud95@gmail.com
-        </p>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <a href="">icon GitHub</a>
-        <a href="">icon LinkedIn</a>
       </div>
-      <p>Réalisé par Corentin Braud</p>
+      <ul>
+        <li>logo</li>
+        <li>logo</li>
+        <li>logo</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section
+      id="projects"
+      class="project-container container"
+    >
+      <div class="division"></div>
+      <div class="content-text">
+        <h2>Projets</h2>
+        <p>
+          Vous pouvez voir ici certains de mes projets que ce soit en front ou
+          back-end.
+        </p>
+      </div>
+
+      <article class="project">
+        <!-- Project 1 -->
+        <div
+          href=""
+          class="card"
+        >
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Booki</h3>
+              <p>HTML, CSS</p>
+            </div>
+
+            <div class="project-link">
+              <a
+                href="#"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          href=""
+          class="card"
+        >
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Portfolio architecte</h3>
+              <p>HTML, CSS, Javascript</p>
+            </div>
+
+            <div class="project-link">
+              <a
+                href="#"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Porject 3 -->
+        <div
+          href=""
+          class="card"
+        >
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Kasa</h3>
+              <p>React, SASS, API</p>
+            </div>
+
+            <div class="project-link">
+              <a
+                href="#"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div
+          href=""
+          class="card"
+        >
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Mon vieux grimoire</h3>
+              <p>Node.js, MongoDB, Express</p>
+            </div>
+
+            <div class="project-link">
+              <a
+                href="#"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <a
+        href="https://github.com/Czrentin"
+        class="btn btn-secondary"
+        target="_blank"
+        >Mon GitHub <i class="fas fa-arrow-right"></i
+      ></a>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="project-container container"
+    >
+      <div class="division"></div>
+      <div class="content-text">
+        <h2>Contact</h2>
+        <p>
+          Si vous souhaitez travailler avec moi ou parler d'une opportunité
+          professionnelle vous pouvez me contacter via les liens suivons ou
+          simplement mon adresse mail.
+        </p>
+        <br />
+        <a href="mailto:corentin.braud95@gmail.com"
+          >corentin.braud95@gmail.com</a
+        >
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <!-- Social links -->
+        <div class="social">
+          <a
+            href="#"
+            target="_blank"
+            ><img
+              src="./assets/linkedin-icon.svg"
+              alt="Linkedin"
+          /></a>
+          <a
+            href="#"
+            target="_blank"
+            ><img
+              src="./assets/github-icon.svg"
+              alt="GitHub"
+          /></a>
+        </div>
+      </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
