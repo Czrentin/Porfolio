@@ -107,6 +107,39 @@ h2::selection {
   max-width: 700px;
 }
 
+/* About */
+.list-technologie li i {
+  font-size: 50px;
+}
+
+.fa-html5 {
+  color: rgba(234, 100, 44, 1);
+}
+
+.fa-css3-alt {
+  color: rgba(45, 165, 214, 1);
+}
+
+.fa-sass {
+  color: rgba(200, 100, 150, 1);
+}
+
+.fa-js {
+  color: rgba(247, 215, 35, 1);
+}
+
+.fa-react {
+  color: rgba(97, 219, 251, 1);
+}
+
+.fa-node {
+  color: rgba(132, 206, 36, 1);
+}
+
+.fa-git-alt {
+  color: rgba(237, 80, 50, 1);
+}
+
 /* Project cards */
 .card {
   padding: 1rem;
@@ -115,6 +148,7 @@ h2::selection {
   border-radius: 5px;
   transition: 0.4s ease-in-out;
   cursor: pointer;
+  box-shadow: 5px 5px 10px #ececec, -5px -3px 10px #f0f0f0;
 }
 
 .card a {
@@ -140,24 +174,38 @@ h2::selection {
 
 /* project 1 */
 .card:nth-child(1) {
-  background: url(../assets/project/booki-home-page-1.png) center center/cover;
+  background: url(../assets/project/booki-home-1.jpeg) center center/cover;
 }
 
 /* Project 2 */
 .card:nth-child(2) {
-  background: url(../assets/project/porfolio-architecte-presentation.png) center
+  background: url(../assets/project/portfolio-architecte-home.jpeg) center
     center/cover;
 }
 
 /* Project 3 */
 .card:nth-child(3) {
-  background: url(../assets/project/kasa-home-page.png) center center/cover;
+  background: url(../assets/project/kasa-home.jpeg) center center/cover;
 }
 
 /* Project 4 */
 .card:nth-child(4) {
-  background: url(../assets/project/porfolio-architecte-works.png) center
+  background: url(../assets/project/mon-vieux-grimoire-home.jpeg) center
     center/cover;
+}
+
+/* Modals */
+.close-modal {
+  border: none;
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
+}
+
+.out {
+  position: absolute;
+  right: 20px;
+  border: none;
+  background: none;
 }
 
 /* Media Queries */

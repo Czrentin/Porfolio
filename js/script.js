@@ -74,4 +74,7 @@ modals.forEach((modal) => {
   modal.querySelector('.close-modal').addEventListener('click', () => {
     modal.close()
   })
+  modal.querySelector('.out').addEventListener('click', () => {
+    modal.close()
+  })
 })

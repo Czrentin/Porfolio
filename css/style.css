@@ -148,16 +148,34 @@ body {
 }
 
 .division {
-  width: 100%;
+  width: 90%;
   height: 2px;
   background-color: var(--card-background);
-  margin: 5.5rem 0;
+  margin: 3rem auto;
 }
+
+/* About */
+.list-technologie {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.list-technologie li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
 /* Projects */
 #projects {
   display: flex;
   flex-direction: column;
-  margin: 2rem auto 5rem;
+  margin: 2rem auto 0;
 }
 
 #projects .btn {
@@ -193,12 +211,53 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  top: 160px;
+  top: 180px;
   left: 10px;
+}
+
+/* Modal */
+.modal {
+  margin: auto;
+  border: none;
+  max-width: 850px;
+  width: 80%;
+  height: 80%;
+  padding: 20px 20px 0 20px;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-description {
+  margin-bottom: 20px;
+}
+
+.modal-description h4 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.modal-images {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 80%;
+  gap: 20px;
+}
+
+.modal-images img {
+  box-shadow: 5px 5px 10px #ececec, -5px -3px 10px #f0f0f0 !important;
 }
 
 /* Footer */
 #footer {
+  margin-top: 2rem;
   background: #111111;
 }
 
@@ -244,6 +303,12 @@ body {
   .project {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .list-technologie {
+    justify-content: center;
   }
 }
 

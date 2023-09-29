@@ -22,6 +22,10 @@
     />
 
     <!-- Link -->
+    <script
+      src="https://kit.fontawesome.com/dd1d346b96.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -143,10 +147,35 @@
           compétences aussi bien en front-end quand back-end.
         </p>
       </div>
-      <ul>
-        <li>logo</li>
-        <li>logo</li>
-        <li>logo</li>
+      <ul class="list-technologie">
+        <li>
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-sass"></i>
+          <p>SASS</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-js"></i>
+          <p>Javascript</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-react"></i>
+          <p>React.js</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-node"></i>
+          <p>Node.js</p>
+        </li>
+        <li>
+          <i class="fa-brands fa-git-alt"></i>
+          <p>Git</p>
+        </li>
       </ul>
     </section>
 
@@ -170,7 +199,6 @@
           <div class="project-info">
             <div class="project-bio">
               <h3>Booki</h3>
-              <p>HTML, CSS</p>
             </div>
 
             <div class="project-link">
@@ -182,18 +210,12 @@
             </div>
           </div>
         </div>
-        <!-- modal 1 -->
-        <dialog class="modal">
-          <p>1</p>
-          <button class="close-modal">Close</button>
-        </dialog>
 
         <!-- Projet 2 -->
         <div class="card">
           <div class="project-info">
             <div class="project-bio">
               <h3>Portfolio architecte</h3>
-              <p>HTML, CSS, Javascript</p>
             </div>
 
             <div class="project-link">
@@ -205,18 +227,12 @@
             </div>
           </div>
         </div>
-        <!-- modal 2 -->
-        <dialog class="modal">
-          <p>2</p>
-          <button class="close-modal">Close</button>
-        </dialog>
 
         <!-- Projet 3 -->
         <div class="card">
           <div class="project-info">
             <div class="project-bio">
               <h3>Kasa</h3>
-              <p>React, SASS, API</p>
             </div>
 
             <div class="project-link">
@@ -228,18 +244,12 @@
             </div>
           </div>
         </div>
-        <!-- modal 3 -->
-        <dialog class="modal">
-          <p>3</p>
-          <button class="close-modal">Close</button>
-        </dialog>
 
         <!-- Projet 4 -->
         <div class="card">
           <div class="project-info">
             <div class="project-bio">
               <h3>Mon vieux grimoire</h3>
-              <p>Node.js, MongoDB, Express</p>
             </div>
 
             <div class="project-link">
@@ -251,10 +261,141 @@
             </div>
           </div>
         </div>
+
+        <!-- modal 1 -->
+        <dialog class="modal">
+          <button class="out">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+
+          <div class="modal-container">
+            <div class="modal-description">
+              <h4>Booki</h4>
+              <p>HTML CSS</p>
+              <p>une courte description de votre réalisation</p>
+              <p>
+                les problématiques que vous avez rencontrées et comment vous les
+                avez surmontées
+              </p>
+            </div>
+            <div class="modal-images">
+              <img
+                src="assets/project/booki-home-1.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/booki-home-2.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/booki-home-3.jpeg"
+                alt=""
+              />
+            </div>
+            <button class="btn close-modal">Fermer</button>
+          </div>
+        </dialog>
+
+        <!-- modal 2 -->
+        <dialog class="modal">
+          <button class="out">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+
+          <div class="modal-container">
+            <div class="modal-description">
+              <h4>Portfolio architecte</h4>
+              <p>HTML CSS Javascript</p>
+              <p>une courte description de votre réalisation</p>
+              <p>
+                les problématiques que vous avez rencontrées et comment vous les
+                avez surmontées
+              </p>
+            </div>
+            <div class="modal-images">
+              <img
+                src="assets/project/portfolio-architecte-home.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/portfolio-architecte-works.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/portfolio-architecte-login.jpeg"
+                alt=""
+              />
+            </div>
+            <button class="btn close-modal">Fermer</button>
+          </div>
+        </dialog>
+
+        <!-- modal 3 -->
+        <dialog class="modal">
+          <button class="out">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+
+          <div class="modal-container">
+            <div class="modal-description">
+              <h4>Kasa</h4>
+              <p>React.js SASS</p>
+              <p>une courte description de votre réalisation</p>
+              <p>
+                les problématiques que vous avez rencontrées et comment vous les
+                avez surmontées
+              </p>
+            </div>
+            <div class="modal-images">
+              <img
+                src="assets/project/kasa-home.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/kasa-location.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/kasa-dropdown.jpeg"
+                alt=""
+              />
+            </div>
+            <button class="btn close-modal">Fermer</button>
+          </div>
+        </dialog>
+
         <!-- modal 4 -->
         <dialog class="modal">
-          <p>4</p>
-          <button class="close-modal">Close</button>
+          <button class="out">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+
+          <div class="modal-container">
+            <div class="modal-description">
+              <h4>Mon vieux grimoire</h4>
+              <p>Node.js MongoDB Express</p>
+              <p>une courte description de votre réalisation</p>
+              <p>
+                les problématiques que vous avez rencontrées et comment vous les
+                avez surmontées
+              </p>
+            </div>
+            <div class="modal-images">
+              <img
+                src="assets/project/mon-vieux-grimoire-home.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/mon-vieux-grimoire-book.jpeg"
+                alt=""
+              />
+              <img
+                src="assets/project/mon-vieux-grimoire-published.jpeg"
+                alt=""
+              />
+            </div>
+            <button class="btn close-modal">Fermer</button>
+          </div>
         </dialog>
       </article>
 
@@ -262,7 +403,7 @@
         href="https://github.com/Czrentin"
         class="btn btn-secondary"
         target="_blank"
-        >Mon GitHub <i class="fas fa-arrow-right"></i
+        >Pour plus de projets <i class="fas fa-arrow-right"></i
       ></a>
     </section>
 
@@ -276,10 +417,11 @@
         <h2>Contact</h2>
         <p>
           Si vous souhaitez travailler avec moi ou parler d'une opportunité
-          professionnelle vous pouvez me contacter via les liens suivons ou
-          simplement mon adresse mail.
+          professionnelle vous pouvez me contacter via les liens suivant ou par
+          mail.
         </p>
         <br />
+        <i class="fa-solid fa-envelope"></i>
         <a href="mailto:corentin.braud95@gmail.com"
           >corentin.braud95@gmail.com</a
         >
