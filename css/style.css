@@ -236,6 +236,9 @@ body {
 
 .modal-description {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .modal-description h4 {
@@ -374,6 +377,9 @@ body {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  .modal-images {
+    width: 100%;
   }
 }
 
