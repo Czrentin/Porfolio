@@ -199,6 +199,7 @@ h2::selection {
   border: none;
   background-color: var(--bg-secondary);
   color: var(--bg-primary);
+  cursor: pointer;
 }
 
 .out {
@@ -206,6 +207,7 @@ h2::selection {
   right: 20px;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 /* Media Queries */
