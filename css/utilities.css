@@ -108,36 +108,9 @@ h2::selection {
 }
 
 /* About */
-.list-technologie li i {
-  font-size: 50px;
-}
-
-.fa-html5 {
-  color: rgba(234, 100, 44, 1);
-}
-
-.fa-css3-alt {
-  color: rgba(45, 165, 214, 1);
-}
-
-.fa-sass {
-  color: rgba(200, 100, 150, 1);
-}
-
-.fa-js {
-  color: rgba(247, 215, 35, 1);
-}
-
-.fa-react {
-  color: rgba(97, 219, 251, 1);
-}
-
-.fa-node {
-  color: rgba(132, 206, 36, 1);
-}
-
-.fa-git-alt {
-  color: rgba(237, 80, 50, 1);
+.list-technologie li img {
+  height: 50px;
+  aspect-ratio: 1/1;
 }
 
 /* Project cards */
@@ -179,8 +152,7 @@ h2::selection {
 
 /* Project 2 */
 .card:nth-child(2) {
-  background: url(../assets/project/portfolio-architecte-home.jpeg) center
-    center/cover;
+  background: url(../assets/project/portfolio-architecte-home.jpeg) center center/cover;
 }
 
 /* Project 3 */
@@ -190,8 +162,7 @@ h2::selection {
 
 /* Project 4 */
 .card:nth-child(4) {
-  background: url(../assets/project/mon-vieux-grimoire-home.jpeg) center
-    center/cover;
+  background: url(../assets/project/mon-vieux-grimoire-home.jpeg) center center/cover;
 }
 
 /* Modals */
