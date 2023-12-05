@@ -156,18 +156,17 @@ body {
 
 /* About */
 .list-technologie {
-  display: flex;
-
-  margin-inline: auto;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 .list-technologie li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-inline: auto;
   width: 80px;
 }
 
@@ -319,15 +318,6 @@ body {
   }
 }
 
-@media (max-width: 850px) {
-  .list-technologie {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-}
-
 @media (max-width: 670px) {
   .navbar .nav-menu {
     position: fixed;
@@ -388,6 +378,12 @@ body {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  .list-technologie {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
   .modal-images {
     width: 100%;
   }
@@ -402,5 +398,13 @@ body {
   .header-container .btn {
     border-radius: 5px;
     width: 80%;
+  }
+}
+
+@media (max-width: 460px) {
+  .list-technologie {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 20px;
   }
 }
