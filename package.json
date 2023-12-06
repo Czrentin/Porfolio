@@ -1,0 +1,20 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "Portfolio personnel de Corentin Braud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./scss/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Czrentin/Porfolio.git"
+  },
+  "author": "Corentin Braud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Czrentin/Porfolio/issues"
+  },
+  "homepage": "https://github.com/Czrentin/Porfolio#readme"
+}
