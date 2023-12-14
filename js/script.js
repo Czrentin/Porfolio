@@ -1,5 +1,5 @@
 // RECUPERATION des fichier JSON
-;(async () => {
+async function fetchData() {
   try {
     const response = await fetch('../data/about.json')
     if (!response.ok) {
@@ -8,10 +8,12 @@
     const data = await response.json()
     // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
     genererTexte(data)
+    genererStack(data)
   } catch (error) {
     console.error("Erreur lors de l'importation du fichier JSON :", error.message)
   }
-})()
+}
+fetchData()
 
 function genererTexte(data) {
   // Utilisez la propriété "presentation" pour générer du texte
@@ -20,6 +22,32 @@ function genererTexte(data) {
   // Mettez à jour le contenu d'une balise HTML existante
   const presentationContainer = document.querySelector('.presentation-paragraphe')
   presentationContainer.innerHTML = texteGenere
+}
+
+function genererStack(data) {
+  const stackData = data[0].stack
+  const ulElement = document.querySelector('.list-technologie')
+  // Boucle sur chaque élément du tableau stack
+  stackData.forEach((item) => {
+    // Créez une balise li
+    const liElement = document.createElement('li')
+
+    // Créez une balise image
+    const imageElement = document.createElement('img')
+    imageElement.src = item.logo
+    imageElement.alt = item.nom
+
+    // Créez un élément de paragraphe pour le texte associé
+    const texteElement = document.createElement('p')
+    texteElement.textContent = item.nom
+
+    // Ajoutez l'image et le texte à la balise li
+    liElement.appendChild(imageElement)
+    liElement.appendChild(texteElement)
+
+    // Ajoutez la balise li à la liste ul
+    ulElement.appendChild(liElement)
+  })
 }
 
 // Burger menu
