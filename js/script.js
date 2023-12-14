@@ -1,3 +1,28 @@
+// RECUPERATION des fichier JSON
+;(async () => {
+  try {
+    const response = await fetch('../data/about.json')
+    if (!response.ok) {
+      throw new Error('Erreur de chargement du fichier JSON')
+    }
+    const data = await response.json()
+    // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
+    genererTexte(data)
+  } catch (error) {
+    console.error("Erreur lors de l'importation du fichier JSON :", error.message)
+  }
+})()
+
+function genererTexte(data) {
+  // Utilisez la propriété "presentation" pour générer du texte
+  const texteGenere = data[0].presentation
+
+  // Mettez à jour le contenu d'une balise HTML existante
+  const presentationContainer = document.querySelector('.presentation-paragraphe')
+  presentationContainer.innerHTML = texteGenere
+}
+
+// Burger menu
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('.nav-menu')
 
@@ -19,9 +44,7 @@ function closeMenu() {
 }
 
 // Event Listeners: Handling toggle event
-const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
-)
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
 function switchTheme(e) {
   if (e.target.checked) {
@@ -47,9 +70,7 @@ function switchTheme(e) {
 
 // Sauvegarde theme
 
-const currentTheme = localStorage.getItem('theme')
-  ? localStorage.getItem('theme')
-  : null
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
 
 if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme)
