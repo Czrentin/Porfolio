@@ -34,367 +34,325 @@
         <div class="container">
           <!-- Logo -->
           <div id="logo">
-            <img
-              src="./assets/portrait.jpg"
-              alt="Portrait de Corentin Braud"
-            />
+            <h1 class="name-title"></h1>
           </div>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li>
-              <a
-                class="nav-link"
-                href="#about-me"
-                >À PROPOS</a
-              >
-            </li>
-            <li>
-              <a
-                class="nav-link"
-                href="#projects"
-                >PROJETS</a
-              >
-            </li>
-            <li>
-              <a
-                class="nav-link"
-                href="#footer"
-                >CONTACT</a
-              >
-            </li>
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input
-                type="checkbox"
-                id="switch"
+          <!-- Toggle switch -->
+          <div class="theme-switch">
+            <input
+              type="checkbox"
+              id="switch"
+            />
+            <label
+              class="toggle-icons"
+              for="switch"
+            >
+              <img
+                class="moon"
+                alt="switch icon vers thème sombre"
+                src="assets/icons/moon.svg"
               />
-              <label
-                class="toggle-icons"
-                for="switch"
-              >
-                <img
-                  class="moon"
-                  alt="switch icon vers thème sombre"
-                  src="assets/icons/moon.svg"
-                />
-                <img
-                  class="sun"
-                  alt="switch icon vers thème clair"
-                  src="assets/icons/sun.svg"
-                />
-              </label>
-            </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+              <img
+                class="sun"
+                alt="switch icon vers thème clair"
+                src="assets/icons/sun.svg"
+              />
+            </label>
           </div>
         </div>
       </nav>
     </header>
 
-    <!-- Hero  -->
-    <section class="hero-container">
-      <img
-        class="profile-image"
-        src="assets/portrait.jpg"
-        alt="Portrait de Corentin Braud"
-      />
-      <h1 id="title-name"></h1>
+    <main>
+      <!-- Hero  -->
+      <section class="hero-container">
+        <img
+          class="profile-image"
+          src="assets/portrait.jpg"
+          alt="Portrait de Corentin Braud"
+        />
+        <h1 id="title-name"></h1>
 
-      <div class="content-text">
-        <h2>Développeur web</h2>
-        <p>
-          Un développeur front-end avec de l'expérience dans les milieux artistique, de quoi
-          apporter une note de fraicheur dans vos projets.
-        </p>
-      </div>
-      <a
-        href="https://github.com/Czrentin"
-        class="btn btn-secondary"
-        target="_blank"
-        >Mon GitHub</a
-      >
-    </section>
+        <div class="content-text">
+          <h2 class="job-title"></h2>
+        </div>
+      </section>
 
-    <!-- À propos -->
-    <section
-      id="about-me"
-      class="project-container container"
-    >
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>À propos de moi</h2>
-        <p class="presentation-paragraphe"></p>
-      </div>
-      <div class="content-list">
-        <h3>Stack technique & outils</h3>
-        <ul class="list-technologie"></ul>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section
-      id="projects"
-      class="project-container container"
-    >
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Projets</h2>
-        <p>Vous pouvez voir ici certains de mes projets, aussi bien en front qu'en back-end.</p>
-      </div>
-
-      <article class="project">
-        <!-- Projet 1 -->
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Booki</h3>
-            </div>
-
-            <div class="project-link">
-              <a
-                href="https://github.com/Czrentin/Booki-project-2"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
+      <!-- Social -->
+      <section class="social-container">
+        <div>
+          <h3>Social</h3>
+          <div>
+            <ul>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">GitHub</a></li>
+            </ul>
           </div>
         </div>
+      </section>
 
-        <!-- Projet 2 -->
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Portfolio architecte</h3>
-            </div>
-
-            <div class="project-link">
-              <a
-                href="https://github.com/Czrentin/P3-Portfolio-Architecte"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
+      <!-- Contact -->
+      <section class="social-container">
+        <div>
+          <h3>Contact</h3>
+          <div>
+            <ul>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">GitHub</a></li>
+            </ul>
           </div>
         </div>
+      </section>
 
-        <!-- Projet 3 -->
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Kasa</h3>
-            </div>
+      <!-- À propos -->
+      <section class="project-container container">
+        <div class="content-text">
+          <h2>À propos de moi</h2>
+          <p class="presentation-paragraphe"></p>
+        </div>
+        <button class="btn">
+          <a href="">En savoir plus</a>
+        </button>
+      </section>
 
-            <div class="project-link">
-              <a
-                href="https://github.com/Czrentin/P6-Kasa"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
+      <!-- Projects -->
+      <section class="project-container container">
+        <div class="content-text">
+          <h2>Projets</h2>
+          <p>Vous pouvez voir ici certains de mes projets, aussi bien en front qu'en back-end.</p>
         </div>
 
-        <!-- Projet 4 -->
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Mon vieux grimoire</h3>
-            </div>
+        <article class="project">
+          <!-- Projet 1 -->
+          <div class="card">
+            <div class="project-info">
+              <div class="project-bio">
+                <h3>Booki</h3>
+              </div>
 
-            <div class="project-link">
-              <a
-                href="https://github.com/Czrentin/P7-Grimoire"
-                target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
+              <div class="project-link">
+                <a
+                  href="https://github.com/Czrentin/Booki-project-2"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- modal 1 -->
-        <dialog class="modal">
-          <button class="out">
-            <i class="fa-solid fa-circle-xmark"></i>
-          </button>
+          <!-- Projet 2 -->
+          <div class="card">
+            <div class="project-info">
+              <div class="project-bio">
+                <h3>Portfolio architecte</h3>
+              </div>
 
-          <div class="modal-container">
-            <div class="modal-description">
-              <h4>Booki</h4>
-              <p>HTML CSS</p>
-              <p>Projet d'étude d'un site de location d'hébergements.</p>
-              <p>
-                Un projet intéréssant qui m'a permit de bien me familliariser avec les aspects de
-                sémantiques et surtout avoir une rigueur en intégration.
-              </p>
+              <div class="project-link">
+                <a
+                  href="https://github.com/Czrentin/P3-Portfolio-Architecte"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
             </div>
-            <div class="modal-images">
-              <img
-                src="assets/project/booki-home-1.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/booki-home-2.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/booki-home-3.jpeg"
-                loading="lazy"
-                alt=""
-              />
-            </div>
-            <button class="btn close-modal">Fermer</button>
           </div>
-        </dialog>
 
-        <!-- modal 2 -->
-        <dialog class="modal">
-          <button class="out">
-            <i class="fa-solid fa-circle-xmark"></i>
-          </button>
+          <!-- Projet 3 -->
+          <div class="card">
+            <div class="project-info">
+              <div class="project-bio">
+                <h3>Kasa</h3>
+              </div>
 
-          <div class="modal-container">
-            <div class="modal-description">
-              <h4>Portfolio architecte</h4>
-              <p>HTML CSS Javascript</p>
-              <p>
-                Projet d'étude d'une architecte d'intérieur pour mettre en avant ses différentes
-                créations.
-              </p>
-              <p>
-                Avec un premier pied dans l'utilisation des API Rest ce projet a été très formateur
-                dans son idée d'aller au plus simple de faire des choses réutilisables.
-              </p>
+              <div class="project-link">
+                <a
+                  href="https://github.com/Czrentin/P6-Kasa"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
             </div>
-            <div class="modal-images">
-              <img
-                src="assets/project/portfolio-architecte-home.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/portfolio-architecte-works.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/portfolio-architecte-login.jpeg"
-                loading="lazy"
-                alt=""
-              />
-            </div>
-            <button class="btn close-modal">Fermer</button>
           </div>
-        </dialog>
 
-        <!-- modal 3 -->
-        <dialog class="modal">
-          <button class="out">
-            <i class="fa-solid fa-circle-xmark"></i>
-          </button>
+          <!-- Projet 4 -->
+          <div class="card">
+            <div class="project-info">
+              <div class="project-bio">
+                <h3>Mon vieux grimoire</h3>
+              </div>
 
-          <div class="modal-container">
-            <div class="modal-description">
-              <h4>Kasa</h4>
-              <p>React.js SASS</p>
-              <p>Projet d'étude de location d'appartements</p>
-              <p>
-                Un superbe projet React qui ma permis d'en apprendre beaucoup tout du long, surement
-                mon projet préféré depuis le début de mon parcours car c'est un projet complet qui
-                m'a posé beaucoup de soucis dont je suis aujourd'hui fier du résultat.
-              </p>
+              <div class="project-link">
+                <a
+                  href="https://github.com/Czrentin/P7-Grimoire"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
             </div>
-            <div class="modal-images">
-              <img
-                src="assets/project/kasa-home.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/kasa-location.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/kasa-dropdown.jpeg"
-                loading="lazy"
-                alt=""
-              />
-            </div>
-            <button class="btn close-modal">Fermer</button>
           </div>
-        </dialog>
 
-        <!-- modal 4 -->
-        <dialog class="modal">
-          <button class="out">
-            <i class="fa-solid fa-circle-xmark"></i>
-          </button>
+          <!-- modal 1 -->
+          <dialog class="modal">
+            <button class="out">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
 
-          <div class="modal-container">
-            <div class="modal-description">
-              <h4>Mon vieux grimoire</h4>
-              <p>Node.js MongoDB Express</p>
-              <p>Projet d'étude d'un site de notation de livres</p>
-              <p>
-                Pour moi un premier pas dans le monde du back-end, un vrai challenge aussi bien sur
-                la partie débuggage que sur la mise en place global. <br />
-                Mais tout ceci ma permis de mieux comprendre des besoins en terme de front-end
-                aussi.
-              </p>
+            <div class="modal-container">
+              <div class="modal-description">
+                <h4>Booki</h4>
+                <p>HTML CSS</p>
+                <p>Projet d'étude d'un site de location d'hébergements.</p>
+                <p>
+                  Un projet intéréssant qui m'a permit de bien me familliariser avec les aspects de
+                  sémantiques et surtout avoir une rigueur en intégration.
+                </p>
+              </div>
+              <div class="modal-images">
+                <img
+                  src="assets/project/booki-home-1.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/booki-home-2.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/booki-home-3.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <button class="btn close-modal">Fermer</button>
             </div>
-            <div class="modal-images">
-              <img
-                src="assets/project/mon-vieux-grimoire-home.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/mon-vieux-grimoire-book.jpeg"
-                loading="lazy"
-                alt=""
-              />
-              <img
-                src="assets/project/mon-vieux-grimoire-published.jpeg"
-                loading="lazy"
-                alt=""
-              />
+          </dialog>
+
+          <!-- modal 2 -->
+          <dialog class="modal">
+            <button class="out">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+
+            <div class="modal-container">
+              <div class="modal-description">
+                <h4>Portfolio architecte</h4>
+                <p>HTML CSS Javascript</p>
+                <p>
+                  Projet d'étude d'une architecte d'intérieur pour mettre en avant ses différentes
+                  créations.
+                </p>
+                <p>
+                  Avec un premier pied dans l'utilisation des API Rest ce projet a été très
+                  formateur dans son idée d'aller au plus simple de faire des choses réutilisables.
+                </p>
+              </div>
+              <div class="modal-images">
+                <img
+                  src="assets/project/portfolio-architecte-home.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/portfolio-architecte-works.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/portfolio-architecte-login.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <button class="btn close-modal">Fermer</button>
             </div>
-            <button class="btn close-modal">Fermer</button>
-          </div>
-        </dialog>
-      </article>
+          </dialog>
 
-      <a
-        href="https://github.com/Czrentin"
-        class="btn btn-secondary"
-        target="_blank"
-        >Pour plus de projets <i class="fas fa-arrow-right"></i
-      ></a>
-    </section>
+          <!-- modal 3 -->
+          <dialog class="modal">
+            <button class="out">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
 
-    <!-- Contact -->
-    <section
-      id="contact"
-      class="project-container container"
-    >
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Contact</h2>
-        <p>
-          Si vous souhaitez travailler avec moi ou parler d'une opportunité professionnelle vous
-          pouvez me contacter via les liens suivant ou par mail.
-        </p>
-        <br />
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:corentin.braud95@gmail.com">corentin.braud95@gmail.com</a>
-      </div>
-    </section>
+            <div class="modal-container">
+              <div class="modal-description">
+                <h4>Kasa</h4>
+                <p>React.js SASS</p>
+                <p>Projet d'étude de location d'appartements</p>
+                <p>
+                  Un superbe projet React qui ma permis d'en apprendre beaucoup tout du long,
+                  surement mon projet préféré depuis le début de mon parcours car c'est un projet
+                  complet qui m'a posé beaucoup de soucis dont je suis aujourd'hui fier du résultat.
+                </p>
+              </div>
+              <div class="modal-images">
+                <img
+                  src="assets/project/kasa-home.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/kasa-location.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/kasa-dropdown.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <button class="btn close-modal">Fermer</button>
+            </div>
+          </dialog>
+
+          <!-- modal 4 -->
+          <dialog class="modal">
+            <button class="out">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+
+            <div class="modal-container">
+              <div class="modal-description">
+                <h4>Mon vieux grimoire</h4>
+                <p>Node.js MongoDB Express</p>
+                <p>Projet d'étude d'un site de notation de livres</p>
+                <p>
+                  Pour moi un premier pas dans le monde du back-end, un vrai challenge aussi bien
+                  sur la partie débuggage que sur la mise en place global. <br />
+                  Mais tout ceci ma permis de mieux comprendre des besoins en terme de front-end
+                  aussi.
+                </p>
+              </div>
+              <div class="modal-images">
+                <img
+                  src="assets/project/mon-vieux-grimoire-home.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/mon-vieux-grimoire-book.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+                <img
+                  src="assets/project/mon-vieux-grimoire-published.jpeg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <button class="btn close-modal">Fermer</button>
+            </div>
+          </dialog>
+        </article>
+
+        <a
+          href="https://github.com/Czrentin"
+          class="btn btn-secondary"
+          target="_blank"
+          >Pour plus de projets</a
+        >
+      </section>
+    </main>
 
     <footer id="footer">
       <div class="container">

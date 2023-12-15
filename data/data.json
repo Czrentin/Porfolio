@@ -1,0 +1,118 @@
+{
+  "informations_personnelles": {
+    "nom": "Corentin Braud",
+    "titre": "Développeur web",
+    "portrait": "assets/portrait.jpg",
+    "email": "corentin.braud95@gmail.com",
+    "telephone": "06 38 66 82 47"
+  },
+  "parcours": {
+    "presentation": "Bonjour, je suis un développeur web français, vivant dans le nord de la région parisienne. Passionné par le développement web et l’expérience utilisateur, j'adore explorer de nouvelles technologies web et je suis toujours en quête de nouvelles compétences à acquérir.",
+    "details": "Mon parcours professionnel et artistique est une aventure riche en diversité. Initialement diplômé en biotechnologie avec un bac STL, j'ai rapidement élargi mes horizons en explorant le monde du web design. Cette première incursion dans le domaine créatif m'a conduit à plonger dans les arts plastiques, une période de ma vie marquée par la découverte et l'expression artistique. Parallèlement à mes études artistiques, j'ai embrassé le champ de la programmation, ouvrant ainsi de nouvelles perspectives professionnelles. Mon engagement en tant qu'animateur étudiant dans un centre de loisirs a constitué une expérience humaine enrichissante, tandis que la création de JCRC Production, devenu aujourd’hui ID Production avec des amis a concrétisé notre passion commune pour la production artistique. En dehors de mes engagements professionnels, le sport et les jeux vidéo occupent une place significative dans ma vie. Ma passion de longue date pour le tennis a évolué vers une participation active en compétition, symbolisant l'importance de la discipline et de la persévérance dans mes activités. Mon parcours atypique se distingue par une quête constante d'apprentissage, d'exploration et d'expression créative. Chaque étape a contribué à façonner ma compréhension holistique de l'art, de la technologie et du travail d'équipe, créant ainsi un ensemble unique de compétences et d'expériences."
+  },
+  "stack": [
+    {
+      "nom": "TypeScript",
+      "logo": "assets/stack/typescript-icon.svg",
+      "categorie": "front"
+    },
+    {
+      "nom": "React.js",
+      "logo": "assets/stack/react-icon.svg",
+      "categorie": "front"
+    },
+    {
+      "nom": "Sass",
+      "logo": "assets/stack/sass-icon.svg",
+      "categorie": "front"
+    },
+    {
+      "nom": "Node.js",
+      "logo": "assets/stack/node-js-icon.svg",
+      "categorie": "back"
+    },
+    {
+      "nom": "Express.js",
+      "logo": "assets/stack/express-js-icon.svg",
+      "categorie": "back"
+    },
+    {
+      "nom": "MongoDB",
+      "logo": "assets/stack/mongo-db-icon.svg",
+      "categorie": "back"
+    },
+    {
+      "nom": "Git",
+      "logo": "assets/stack/git-icon.svg",
+      "categorie": "outil"
+    },
+    {
+      "nom": "Npm",
+      "logo": "assets/stack/npm-icon.svg",
+      "categorie": "outil"
+    },
+    {
+      "nom": "Postman",
+      "logo": "assets/stack/postman-icon.svg",
+      "categorie": "outil"
+    },
+    {
+      "nom": "Figma",
+      "logo": "assets/stack/figma-icon.svg",
+      "categorie": "outil"
+    },
+    {
+      "nom": "VSCode",
+      "logo": "assets/stack/vscode-icon.svg",
+      "categorie": "outil"
+    },
+    {
+      "nom": "Notion",
+      "logo": "assets/stack/notion-icon.svg",
+      "categorie": "outil"
+    }
+  ],
+  "projets": [
+    {
+      "titre": "Kasa",
+      "cover": "",
+      "description": "Kasa vous recrute en tant que développeur front-end en freelance pour développer sa nouvelle plateforme web. Elle est dans le métier de la location d’appartements entre particuliers et a plus de 500 annonces postées chaque jour.",
+      "stack": ["React.js", "Sass"],
+      "contexte": "Il s’agit ici d’un projet d’étude pour développer un front-end fonctionnel en React.js avec un back-end pas encore construit donc simplement avec un fichier JSON. Laura, la CTO, a lancé une refonte totale pour passer à une stack complète en JavaScript avec Node.js côté back-end, et React.js côté front-end. De nouvelles maquettes et même un prototype sur Figma sont disponibles pour que le rendu soit le plus réaliste possible.",
+      "objectifs": [
+        "Mettre en place un environnement sous React.js & Sass",
+        "Configurer la navigation entre les pages de l'application avec React Router",
+        "Développer des éléments de l'interface d'un site web grâce à des composants React",
+        "Mettre en œuvre des animations CSS de ces composants"
+      ],
+      "images": [""]
+    },
+    {
+      "titre": "Grimoire",
+      "cover": "",
+      "description": "Un client souhaite ouvrir un site de notation de livres au nom de sa chaîne de librairies “Le Vieux Grimoire”. Le site s’appellera “Mon Vieux Grimoire” et nécessite que la partie back-end et l’API soit faite !",
+      "stack": ["Node.js", "Express.js", "MongoDB", "Différentes librairies JS"],
+      "contexte": "Il s’agit ici d’un projet d’étude pour développer un back-end fonctionnel avec Node.js, la partie front-end est déjà fournie. Il s’agit donc d’une petite chaîne de librairies qui souhaite ouvrir un site de référencement et de notation de livres. Pour développer le tout j’ai eu à ma disposition les spécifications fonctionnelles du site, celle de l’API et bien sûr le code du front-end. Le projet adopte aussi des pratiques de GreenCode ce qui pose de nouvelles problématiques.",
+      "objectifs": [
+        "Implémenter un modèle logique de données conformément à la réglementation",
+        "Mettre en œuvre des opérations CRUD de manière sécurisée",
+        "Stocker des données de manière sécurisée",
+        "Développer en respectant des pratiques de GreenCode"
+      ],
+      "images": [""]
+    },
+    {
+      "titre": "Architecte",
+      "cover": "",
+      "description": "Amélioration du site portfolio d’une architecte d’intérieur en le rendant dynamique, le tout avec une API.",
+      "stack": ["JavaScript", "HTML", "CSS"],
+      "contexte": "Il s’agit ici d’un projet d’étude pour développer un front-end dynamique avec une API Swagger. Ce projet consiste donc à reprendre une base existante d’un site vitrine statique développé en Javascript pour en faire quelque chose de modulaire dans laquelle seule la propriétaire pourra modifier le contenu. Tout ceci est géré par une API Swagger que j’ai du utiliser pour implémenter toutes les actions CRUD sur le site et permettre à la cliente de modifier le contenu comme bon lui semble. Il y a pleins de choses déjà présentes pour le projet afin d’avoir un rendu le plus proche du milieu professionnel comme le design avec les nouvelles fonctionnalités via Figma, le code back-end qui permettra de faire persister les données et de tester les fonctionnalités, le Kanban de la mission, pour voir les tâches qui attribuées et enfin le code front-end d’origine avec la version statique de la page de l’architecte",
+      "objectifs": [
+        "Gérer les événements utilisateurs",
+        "Manipuler les éléments du DOM pour avoir un site dynamique",
+        "Récupérer les données utilisateurs via des formulaires"
+      ],
+      "images": [""]
+    }
+  ]
+}

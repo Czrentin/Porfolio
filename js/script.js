@@ -1,12 +1,13 @@
 // RECUPERATION des fichier JSON
 async function fetchData() {
   try {
-    const response = await fetch('../data/about.json')
+    const response = await fetch('../data/data.json')
     if (!response.ok) {
       throw new Error('Erreur de chargement du fichier JSON')
     }
     const data = await response.json()
     // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
+    genererTitres(data)
     genererTexte(data)
     genererStack(data)
   } catch (error) {
@@ -15,14 +16,20 @@ async function fetchData() {
 }
 fetchData()
 
+function genererTitres(data) {
+  const nameTitle = document.querySelector('.name-title')
+  nameTitle.innerHTML = data.informations_personnelles.nom
+  const jobTitle = document.querySelector('.job-title')
+  jobTitle.innerHTML = data.informations_personnelles.titre
+}
+
 function genererTexte(data) {
-  // Utilisez la propriété "presentation" pour générer du texte
   const presentationContainer = document.querySelector('.presentation-paragraphe')
-  presentationContainer.innerHTML = data[0].presentation
+  presentationContainer.innerHTML = data.parcours.presentation
 }
 
 function genererStack(data) {
-  const stackData = data[0].stack
+  const stackData = data.stack
   const ulElement = document.querySelector('.list-technologie')
   // Boucle sur chaque élément du tableau stack
   stackData.forEach((item) => {
@@ -41,27 +48,6 @@ function genererStack(data) {
     // Ajoutez la balise li à la liste ul
     ulElement.appendChild(liElement)
   })
-}
-
-// Burger menu
-const hamburger = document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav-menu')
-
-hamburger.addEventListener('click', mobileMenu)
-
-function mobileMenu() {
-  hamburger.classList.toggle('active')
-  navMenu.classList.toggle('active')
-}
-
-// Close navbar when link is clicked
-const navLink = document.querySelectorAll('.nav-link')
-
-navLink.forEach((n) => n.addEventListener('click', closeMenu))
-
-function closeMenu() {
-  hamburger.classList.remove('active')
-  navMenu.classList.remove('active')
 }
 
 // Event Listeners: Handling toggle event
