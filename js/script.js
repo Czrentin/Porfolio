@@ -17,11 +17,8 @@ fetchData()
 
 function genererTexte(data) {
   // Utilisez la propriété "presentation" pour générer du texte
-  const texteGenere = data[0].presentation
-
-  // Mettez à jour le contenu d'une balise HTML existante
   const presentationContainer = document.querySelector('.presentation-paragraphe')
-  presentationContainer.innerHTML = texteGenere
+  presentationContainer.innerHTML = data[0].presentation
 }
 
 function genererStack(data) {
@@ -29,22 +26,18 @@ function genererStack(data) {
   const ulElement = document.querySelector('.list-technologie')
   // Boucle sur chaque élément du tableau stack
   stackData.forEach((item) => {
-    // Créez une balise li
     const liElement = document.createElement('li')
 
-    // Créez une balise image
+    //Image et texte pour chaque item
     const imageElement = document.createElement('img')
     imageElement.src = item.logo
     imageElement.alt = item.nom
-
-    // Créez un élément de paragraphe pour le texte associé
     const texteElement = document.createElement('p')
     texteElement.textContent = item.nom
 
     // Ajoutez l'image et le texte à la balise li
     liElement.appendChild(imageElement)
     liElement.appendChild(texteElement)
-
     // Ajoutez la balise li à la liste ul
     ulElement.appendChild(liElement)
   })
