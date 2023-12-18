@@ -19,7 +19,7 @@
 
 .card {
   display: block;
-  width: 350px;
+  width: 60%;
 }
 
 .content-card {
@@ -27,12 +27,17 @@
   img {
     display: block;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 10/3;
+    transition: 200ms;
+    &:hover {
+      filter: brightness(70%);
+    }
   }
   h4 {
+    font-size: 30px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 10%;
     pointer-events: none;
   }
 }
