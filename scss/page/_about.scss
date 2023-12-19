@@ -1,3 +1,7 @@
+.about-container {
+  grid-column: 2 span;
+}
+
 .list-technologie {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

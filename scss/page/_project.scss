@@ -1,12 +1,5 @@
-#projects {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem auto 0;
-}
-
-#projects .btn {
-  align-self: center;
-  margin: 2rem 0;
+.project-container {
+  grid-column: 2 span;
 }
 
 .project {

@@ -9,7 +9,7 @@ async function fetchData() {
     // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
     genererTitres(data)
     genererTexte(data)
-    genererStack(data)
+    // genererStack(data)
   } catch (error) {
     console.error("Erreur lors de l'importation du fichier JSON :", error.message)
   }
@@ -28,27 +28,39 @@ function genererTexte(data) {
   presentationContainer.innerHTML = data.parcours.presentation
 }
 
-function genererStack(data) {
-  const stackData = data.stack
-  const ulElement = document.querySelector('.list-technologie')
-  // Boucle sur chaque élément du tableau stack
-  stackData.forEach((item) => {
-    const liElement = document.createElement('li')
+// function genererStack(data) {
+//   const stackData = data.stack
+//   const ulElement = document.querySelector('.list-technologie')
+//   // Boucle sur chaque élément du tableau stack
+//   stackData.forEach((item) => {
+//     const liElement = document.createElement('li')
 
-    //Image et texte pour chaque item
-    const imageElement = document.createElement('img')
-    imageElement.src = item.logo
-    imageElement.alt = item.nom
-    const texteElement = document.createElement('p')
-    texteElement.textContent = item.nom
+//     //Image et texte pour chaque item
+//     const imageElement = document.createElement('img')
+//     imageElement.src = item.logo
+//     imageElement.alt = item.nom
+//     const texteElement = document.createElement('p')
+//     texteElement.textContent = item.nom
 
-    // Ajoutez l'image et le texte à la balise li
-    liElement.appendChild(imageElement)
-    liElement.appendChild(texteElement)
-    // Ajoutez la balise li à la liste ul
-    ulElement.appendChild(liElement)
-  })
+//     // Ajoutez l'image et le texte à la balise li
+//     liElement.appendChild(imageElement)
+//     liElement.appendChild(texteElement)
+//     // Ajoutez la balise li à la liste ul
+//     ulElement.appendChild(liElement)
+//   })
+// }
+
+// Fonction pour copier le contenu du span situé juste au-dessus du bouton
+function copyToClipboard(event) {
+  const copyContent = event.currentTarget.previousElementSibling.innerText
+  navigator.clipboard.writeText(copyContent)
 }
+
+// Liste de tous les boutons avec la classe 'copy-btn' et eventListener associé
+const copyButtons = document.querySelectorAll('.copy-btn')
+copyButtons.forEach((button) => {
+  button.addEventListener('click', copyToClipboard)
+})
 
 // Event Listeners: Handling toggle event
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')

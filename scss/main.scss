@@ -10,3 +10,10 @@
 @import './page/about';
 @import './page/project';
 @import './page/contact';
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin-inline: auto;
+}
