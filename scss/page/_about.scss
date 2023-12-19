@@ -1,5 +1,9 @@
 .about-container {
   grid-column: 2 span;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .list-technologie {
