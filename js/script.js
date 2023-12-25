@@ -7,8 +7,7 @@ async function fetchData() {
     }
     const data = await response.json()
     // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
-    genererTitres(data)
-    genererTexte(data)
+    generateText(data)
     // genererStack(data)
   } catch (error) {
     console.error("Erreur lors de l'importation du fichier JSON :", error.message)
@@ -16,14 +15,11 @@ async function fetchData() {
 }
 fetchData()
 
-function genererTitres(data) {
+function generateText(data) {
   const nameTitle = document.querySelector('.name-title')
   nameTitle.innerHTML = data.informations_personnelles.nom
   const jobTitle = document.querySelector('.job-title')
   jobTitle.innerHTML = data.informations_personnelles.titre
-}
-
-function genererTexte(data) {
   const presentationContainer = document.querySelector('.presentation-paragraphe')
   presentationContainer.innerHTML = data.parcours.presentation
 }
