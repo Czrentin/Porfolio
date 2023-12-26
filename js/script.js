@@ -8,6 +8,7 @@ async function fetchData() {
     const data = await response.json()
     // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
     generateText(data)
+    generateProjectsCard(data)
     // genererStack(data)
   } catch (error) {
     console.error("Erreur lors de l'importation du fichier JSON :", error.message)
@@ -22,6 +23,39 @@ function generateText(data) {
   jobTitle.innerHTML = data.informations_personnelles.titre
   const presentationContainer = document.querySelector('.presentation-paragraphe')
   presentationContainer.innerHTML = data.parcours.presentation
+}
+
+function generateProjectsCard(data) {
+  const projectsContainer = document.querySelector('.grid-project')
+
+  data.projets.forEach((projet) => {
+    const projectLink = document.createElement('a')
+    projectLink.href = projet.lien
+
+    const projectCard = document.createElement('div')
+    projectCard.className = 'card'
+
+    const projectContent = document.createElement('div')
+    projectContent.className = 'content-card'
+
+    const projectImage = document.createElement('img')
+    projectImage.src = projet.cover
+
+    const projectOverlay = document.createElement('div')
+    projectOverlay.className = 'overlay-card'
+
+    const projectTitle = document.createElement('h4')
+    projectTitle.textContent = projet.titre
+
+    projectContent.appendChild(projectImage)
+    projectContent.appendChild(projectOverlay)
+    projectContent.appendChild(projectTitle)
+
+    projectCard.appendChild(projectContent)
+    projectLink.appendChild(projectCard)
+
+    projectsContainer.appendChild(projectLink)
+  })
 }
 
 // function genererStack(data) {
