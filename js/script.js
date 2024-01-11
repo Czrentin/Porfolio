@@ -1,4 +1,4 @@
-// RECUPERATION des fichier JSON
+// * RECUPERATION des fichier JSON
 async function fetchData() {
   try {
     const response = await fetch('../data/data.json')
@@ -6,7 +6,7 @@ async function fetchData() {
       throw new Error('Erreur de chargement du fichier JSON')
     }
     const data = await response.json()
-    // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
+    // * Fonction ou exécutez du code qui nécessite l'utilisation des données ici
     generateText(data)
     generateProjectsCard(data)
     // genererStack(data)
@@ -58,41 +58,41 @@ function generateProjectsCard(data) {
   })
 }
 
-// function genererStack(data) {
+// Todo : function genererStack(data) {
 //   const stackData = data.stack
 //   const ulElement = document.querySelector('.list-technologie')
-//   // Boucle sur chaque élément du tableau stack
+//   / Boucle sur chaque élément du tableau stack
 //   stackData.forEach((item) => {
 //     const liElement = document.createElement('li')
 
-//     //Image et texte pour chaque item
+//     / Image et texte pour chaque item
 //     const imageElement = document.createElement('img')
 //     imageElement.src = item.logo
 //     imageElement.alt = item.nom
 //     const texteElement = document.createElement('p')
 //     texteElement.textContent = item.nom
 
-//     // Ajoutez l'image et le texte à la balise li
+//     / Ajoutez l'image et le texte à la balise li
 //     liElement.appendChild(imageElement)
 //     liElement.appendChild(texteElement)
-//     // Ajoutez la balise li à la liste ul
+//     / Ajoutez la balise li à la liste ul
 //     ulElement.appendChild(liElement)
 //   })
 // }
 
-// Fonction pour copier le contenu du span situé juste au-dessus du bouton
+// * Fonction pour copier le contenu du span situé juste au-dessus du bouton
 function copyToClipboard(event) {
   const copyContent = event.currentTarget.previousElementSibling.innerText
   navigator.clipboard.writeText(copyContent)
 }
 
-// Liste de tous les boutons avec la classe 'copy-btn' et eventListener associé
+// * Liste de tous les boutons avec la classe 'copy-btn' et eventListener associé
 const copyButtons = document.querySelectorAll('.copy-btn')
 copyButtons.forEach((button) => {
   button.addEventListener('click', copyToClipboard)
 })
 
-// Event Listeners: Handling toggle event
+// * Event Listeners: Handling toggle event
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
 
 function switchTheme(e) {
@@ -105,8 +105,7 @@ function switchTheme(e) {
 
 toggleSwitch.addEventListener('change', switchTheme, false)
 
-//  Store color theme for future visits
-
+// * Store color theme for future visits
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', 'dark')
@@ -117,8 +116,7 @@ function switchTheme(e) {
   }
 }
 
-// Sauvegarde theme
-
+// * Sauvegarde theme
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
 
 if (currentTheme) {
@@ -129,8 +127,7 @@ if (currentTheme) {
   }
 }
 
-// Gestion modal
-
+// * Gestion modal
 const modals = document.querySelectorAll('.modal')
 const cards = document.querySelectorAll('.card')
 
