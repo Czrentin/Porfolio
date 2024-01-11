@@ -9,6 +9,11 @@ async function fetchData() {
     // Fonction ou exécutez du code qui nécessite l'utilisation des données ici
     genererTexte(data)
     genererStack(data)
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      // On met cette condition pour ceux qui ont un pc lent / peu de batterie / etc...
+      addAnimation()
+    }
   } catch (error) {
     console.error("Erreur lors de l'importation du fichier JSON :", error.message)
   }
@@ -23,7 +28,7 @@ function genererTexte(data) {
 
 function genererStack(data) {
   const stackData = data[0].stack
-  const ulElement = document.querySelector('.list-technologie')
+  const ulElement = document.querySelector('.scroller-inner')
   // Boucle sur chaque élément du tableau stack
   stackData.forEach((item) => {
     const liElement = document.createElement('li')
@@ -39,7 +44,7 @@ function genererStack(data) {
     liElement.appendChild(imageElement)
     liElement.appendChild(texteElement)
     // Ajoutez la balise li à la liste ul
-    ulElement.appendChild(liElement)
+    ulElement.appendChild(imageElement)
   })
 }
 
@@ -120,3 +125,22 @@ modals.forEach((modal) => {
     modal.close()
   })
 })
+
+// Gestion infinite loop animation
+
+const scrollers = document.querySelectorAll('.scroller') //? Ici on imagine qu'il peut en avoir plusieurs directement
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute('data-animated', true)
+
+    const scrollerInner = scroller.querySelector('.scroller-inner')
+    const scrollerContent = Array.from(scrollerInner.children) // On a besoin d'un tableau au cas où il y aurait une modification du dom en cours etc
+
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true)
+      duplicatedItem.setAttribute('aria-hidden', true) // Pour éviter que dans le lecteur d'écran il soit afficher 2 fois et que ça soit génant
+      scrollerInner.appendChild(duplicatedItem)
+    })
+  })
+}

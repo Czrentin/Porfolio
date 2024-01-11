@@ -1,24 +1,15 @@
-.list-technologie {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 15px;
-  grid-row-gap: 30px;
-}
-
-.list-technologie li {
+.scroller-inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin-inline: auto;
   width: 80px;
+  img {
+    height: 70px;
+    aspect-ratio: 1/1;
+  }
 }
 
-.list-technologie li img {
-  height: 50px;
-  aspect-ratio: 1/1;
-}
-
-.content-list {
+.scroller-inner li .content-list {
   margin: 20px;
   width: 80%;
   margin-inline: auto;
@@ -28,19 +19,50 @@
   margin: 20px 0;
 }
 
-/* Responsive */
+/* Scroller */
 
-@media (max-width: 670px) {
-  .list-technologie {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+.scroller {
+  max-width: 700px;
+  margin: 3rem auto 0;
+}
+
+.scroller-inner {
+  display: flex;
+  gap: 2rem; /* Utiliser une custom property sera mieux ici et dans le Keyframe*/
+  flex-wrap: wrap;
+}
+
+.scroller[data-animated='true'] {
+  overflow: hidden;
+  /* mask donne l'effet fate un peu mais clairement pas obligatoire */
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  ); /* Nécessaire pour chrome les autres sont prit en compte avec mask */
+}
+
+.scroller[data-animated='true'] .scroller-inner {
+  width: max-content; /* Important sinon il prend la taille du parent et l'effet à un jump visible (PS : si y'a un soucis essayer fit-content */
+  flex-wrap: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(
+      calc(-50% - 1rem)
+    ); /* Xrem c'est parce qu'il faut que ça soit la moitié du gap entre les items */
   }
 }
 
+/* Responsive */
+
 @media (max-width: 460px) {
-  .list-technologie {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 20px;
+  .scroller[data-animated='true'] .scroller-inner {
+    animation: scroll 15s linear infinite;
   }
 }
